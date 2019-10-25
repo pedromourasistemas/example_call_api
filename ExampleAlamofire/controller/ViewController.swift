@@ -11,33 +11,49 @@ import Alamofire
 import Nuke
 
 class ViewController: UIViewController {
-    
-    //var imageURL: String
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        AF.request("https://curso-iniciantes-1.getsandbox.com/collectionView/programmingLanguages").response { response in
+        requestDataAPI()
+    }
+    
+    //MARK: METHODS
+    
+    func requestDataAPI()
+    {
+        AF.request("https://curso-iniciantes-1.getsandbox.com/collectionView/programmingLanguages")
+            .validate(statusCode: 200..<300)
+            .validate(contentType: ["application/json"])
+            .responseData { response in
+                switch response.result {
+                case .success:
+                    debugPrint(response)
+                case let .failure(error):
+                    print(error)
+                }
+            }
+            /*.response { response in
             debugPrint(response)
-            processWeatherData(response.data)
-        }
-        
-        //imageURL = "https://curso-iniciantes-1.getsandbox.com/collectionView/programmingLanguages"
-        
-        //Nuke.loadImage(with: imageURL, into: imageView)
+            
+            //var data: Data = response.dataUsingEncoding(NSUTF8StringEncoding)!
+            
+            //processWeatherData(data)
+        }*/
     }
 
     private func processWeatherData(data: Data) {
         do {
             if let JSON = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary,
-               let weatherData = WeatherData.from(JSON) {
-                print(weatherData.name)
-                print(weatherData.desc)
-                print(weatherData.imageURL)
+               let languages = LanguagesData.from(JSON) {
+                print(languages.name)
+                print(languages.desc)
+                print(languages.imageURL)
             }
 
-        } catch {
+        } catch
+        {
             print("Unable to Initialize Weather Data")
         }
     }

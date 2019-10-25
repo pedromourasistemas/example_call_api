@@ -8,7 +8,7 @@
 
 import Mapper
 
-struct WeatherData: Mappable {
+struct LanguagesData: Mappable {
 
     let name: String
     let desc: String

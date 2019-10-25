@@ -15,7 +15,7 @@
 		90E81EC723632B620044CD70 /* ExampleAlamofire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90E81EC523632B620044CD70 /* ExampleAlamofire.xcdatamodeld */; };
 		90E81EC923632B640044CD70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E81EC823632B640044CD70 /* Assets.xcassets */; };
 		90E81ECC23632B640044CD70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E81ECA23632B640044CD70 /* LaunchScreen.storyboard */; };
-		90E81ED7236362780044CD70 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E81ED6236362780044CD70 /* WeatherData.swift */; };
+		90E81ED7236362780044CD70 /* LanguagesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E81ED6236362780044CD70 /* LanguagesData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		90E81EC823632B640044CD70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90E81ECB23632B640044CD70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90E81ECD23632B640044CD70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90E81ED6236362780044CD70 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		90E81ED6236362780044CD70 /* LanguagesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 		90E81ED3236360680044CD70 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				90E81ED6236362780044CD70 /* WeatherData.swift */,
+				90E81ED6236362780044CD70 /* LanguagesData.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -237,7 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E81EC123632B620044CD70 /* ViewController.swift in Sources */,
-				90E81ED7236362780044CD70 /* WeatherData.swift in Sources */,
+				90E81ED7236362780044CD70 /* LanguagesData.swift in Sources */,
 				90E81EC723632B620044CD70 /* ExampleAlamofire.xcdatamodeld in Sources */,
 				90E81EBD23632B620044CD70 /* AppDelegate.swift in Sources */,
 				90E81EBF23632B620044CD70 /* SceneDelegate.swift in Sources */,

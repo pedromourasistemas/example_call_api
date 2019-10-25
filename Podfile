@@ -9,5 +9,6 @@ target 'ExampleAlamofire' do
   pod 'Alamofire', '~> 5.0.0-rc.2' #Requisitions URLs
   pod 'Nuke', '~> 8.0' #Download Images
   pod 'ModelMapper' #Model Mapper
+  pod 'ObjectMapper', '~> 3.4'
 
 end
