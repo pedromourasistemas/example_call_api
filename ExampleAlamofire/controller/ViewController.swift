@@ -11,52 +11,36 @@ import Alamofire
 import Nuke
 
 class ViewController: UIViewController {
+    
+    let titleView: UILabel = {
+        let label = UILabel()
 
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .red
+
+        return label
+    }()
+
+    //MARK: LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        requestDataAPI()
+        view.addSubview(titleView)
+
+        NSLayoutConstraint.activate([
+            titleView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titleView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            ])
+
+        LanguagesAPI().getLanguages() { (name) in // 1
+            self.titleView.text = name // 2
+        }
+        
+        //LanguagesAPI().onGetLanguages()
     }
     
     //MARK: METHODS
     
-    func requestDataAPI()
-    {
-        AF.request("https://curso-iniciantes-1.getsandbox.com/collectionView/programmingLanguages")
-            .validate(statusCode: 200..<300)
-            .validate(contentType: ["application/json"])
-            .responseData { response in
-                switch response.result {
-                case .success:
-                    debugPrint(response)
-                case let .failure(error):
-                    print(error)
-                }
-            }
-            /*.response { response in
-            debugPrint(response)
-            
-            //var data: Data = response.dataUsingEncoding(NSUTF8StringEncoding)!
-            
-            //processWeatherData(data)
-        }*/
-    }
-
-    private func processWeatherData(data: Data) {
-        do {
-            if let JSON = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary,
-               let languages = LanguagesData.from(JSON) {
-                print(languages.name)
-                print(languages.desc)
-                print(languages.imageURL)
-            }
-
-        } catch
-        {
-            print("Unable to Initialize Weather Data")
-        }
-    }
 
 }
-

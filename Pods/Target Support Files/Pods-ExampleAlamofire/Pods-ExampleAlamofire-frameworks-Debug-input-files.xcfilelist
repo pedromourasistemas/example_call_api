@@ -1,5 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-ExampleAlamofire/Pods-ExampleAlamofire-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework
 ${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework
 ${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework
 ${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
